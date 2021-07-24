@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inserção de texto javascript</title>
+  <style>
+    .centralizar {
+      font-size: 2rem;
+      font-family: sans-serif;
+      margin: 0 auto;
+    }
+    h1, p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="centralizar">
+    <h1>Inserção de texto via prompt javascript</h1>
+    <p class="inserirAqui">Aqui o seu texto</p>
+  </div>
+
+  <script>
+    let texto = prompt("Insira aqui seu texto");
+    document.querySelector(".inserirAqui").innerHTML = " " + texto;
+  </script>
+</body>
+</html>
