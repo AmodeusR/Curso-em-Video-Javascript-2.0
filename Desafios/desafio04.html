@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 4</title>
+  <style>
+    input {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculando o Troco</h1>
+  <input type="button" value="Calcular o Troco" class="cta">
+
+  <script>
+    document.querySelector("input.cta").addEventListener("click", calcularTroco);
+
+    function calcularTroco() {
+      let produto = prompt("Qual produto você está comprando?");
+      let preço = prompt(`Qual é o preço do produto ${produto}?`);
+      let dinheiro = prompt(`Quanto você deu para pagar o produto ${produto}?`);
+
+      alert(`Você comprou o produto ${produto} por ${preço}.\nFoi dado ${dinheiro} em dinheiro e receberás ${dinheiro - preço} de troco!`);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 1</title>
+  <style>
+    input {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Desafio 1</h1>
+  <input type="button" value="Botão 1">
+  <input type="button" value="Botão 2">
+  <input type="button" value="Botão 3">
+
+  <script>
+    let botão1 = document.getElementsByTagName("input")[0];
+    let botão2 = document.getElementsByTagName("input")[1];
+    let botão3 = document.getElementsByTagName("input")[2];
+  
+    botão1.addEventListener("click", clique1);
+    botão2.addEventListener("click", clique2);
+    botão3.addEventListener("click", clique3);
+
+    function clique1() {
+      alert("Você clicou no Botão 1!");
+    }
+    function clique2() {
+      alert("Você clicou no Botão 2!");
+    }
+    function clique3() {
+      alert("Você clicou no Botão 3!");
+    }
+  
+  </script>
+</body>
+</html>
