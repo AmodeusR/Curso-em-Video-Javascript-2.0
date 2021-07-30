@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .principal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .botão {
+      padding: .5rem 2.5rem;
+      margin: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="principal">
+    <h1>Estrangeiro ou não</h1>
+    <p>Em qual país você está morando?</p>
+    <input type="name" name="pais" id="pais">
+    <button class="botão">Confirmar</button>
+    <div class="resultado"></div>
+  </div>
+
+  <script>
+    document.querySelector("button.botão").addEventListener("click", nacionalidade);
+    let resultado = document.querySelector("div.resultado");
+
+    function nacionalidade() {
+      let pais = document.querySelector("input#pais").value;
+      if (pais == "Brasil" || pais == "brasil") {
+        resultado.innerHTML = "Você não é estrangeiro.";
+      } else {
+        resultado.innerHTML = "Você é estrangeiro";
+      }
+    }
+
+  </script>
+
+</body>
+</html>

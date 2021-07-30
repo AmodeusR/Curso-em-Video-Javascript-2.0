@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multado ou não</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .principal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .botão {
+      padding: .5rem 2.5rem;
+      margin: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="principal">
+    <h1>Sistema de Multas</h1>
+    <p>Insira a velocidade que estavas dirigindo</p>
+    <input type="number" name="velocidade" id="velocidade">
+    <button class="botão">Confirmar</button>
+    <div class="resultado"></div>
+  </div>
+
+  <script>
+    let resultado = document.querySelector(".resultado");
+    document.querySelector(".botão").addEventListener("click", determinarMulta);
+    
+    function determinarMulta() {
+      let velocidade = Number(document.querySelector("#velocidade").value);
+
+      if (velocidade > 60) {
+        resultado.innerHTML = "<b>Você ultrapassou a velocidade limite, multado!</b>";
+      } else {
+        resultado.innerHTML = "<b>Você não ultrapassou a velocidade limite!</b>";
+      }
+    }
+
+  </script>
+</body>
+</html>
