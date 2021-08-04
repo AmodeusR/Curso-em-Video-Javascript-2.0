@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Medidas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .btn {
+      padding: 1em 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conversor de Medidas</h1>
+  <button class="btn" type="button" >Iniciar</button>
+
+  <p class="resultado">Clique no botão acima para iniciar!</p>
+  
+  <script>
+    document.querySelector(".btn").addEventListener("click", converter);
+    const resultado = document.querySelector(".resultado");
+
+    function converter() {
+      let metrosUsuário = prompt("Insira uma distância em metros");
+
+      resultado.innerHTML =
+      `
+      ${metrosUsuário} metros são equivalente a:<br><br>
+
+      ${metrosUsuário / 1000} quilômetros (km) <br>
+      ${metrosUsuário / 100} hectômetros (hm) <br>
+      ${metrosUsuário / 10} decâmetros (dam) <br>
+      ${metrosUsuário * 10} decímetros (dm) <br>
+      ${metrosUsuário * 100} centímetros (cm) <br>
+      ${metrosUsuário * 1000} milímetros (mm)
+      `
+    }
+  </script>
+</body>
+</html>
