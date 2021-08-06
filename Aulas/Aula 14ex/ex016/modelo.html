@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de Exercício </title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="flex">
+    <h1>Contador</h1>
+    <section class="principal">
+      <div class="caixas">
+        <div class="conjunto">
+          <label for="inicio">Início:</label>
+          <input type="number" name="inicio" id="inicio">
+        </div>
+
+        <div class="conjunto">
+          <label for="fim">Fim:</label>
+          <input type="number" name="fim" id="fim">
+        </div>
+        
+        <div class="conjunto">
+          <label for="passo">Passo:</label>
+          <input type="number" name="passo" id="passo">
+        </div>
+        
+        <input type="button" value="Contar" class="botão">
+      </div>
+      <p class="resultado">Esperando valores...</p>
+    </section>
+    <footer class="rodape">&copy; Amodeus R.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

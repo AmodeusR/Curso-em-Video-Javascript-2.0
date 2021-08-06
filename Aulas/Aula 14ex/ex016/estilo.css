@@ -1,0 +1,44 @@
+body {
+  background: rgb(56, 102, 226);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principal {
+  background: white;
+  color: black;
+  border-radius: 20px;
+  width: min(70%, 500px);
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.226);
+}
+
+.caixas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.conjunto {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.botão {
+  padding: 1em 2em;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.resultado {
+  margin: 2rem 1rem;
+}
