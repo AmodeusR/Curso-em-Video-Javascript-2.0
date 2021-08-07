@@ -10,18 +10,32 @@ function contar() {
   } else if (passo == 0) {
     alert("Passo inválido! Considerando passo 1");
     passo = 1;
-  } else {
-    let inícioN = Number(início);
-    let fimN = Number(fim);
-    let passoN = Number(passo);
+  }
+  
+  let inícioN = Number(início);
+  let fimN = Number(fim);
+  let passoN = Number(passo);
 
+  if (inícioN < fimN) {
     resultado.innerHTML = `${inícioN} 👉 `;
-    while(inícioN < fimN) {
+    while(inícioN + passoN <= fimN) {
       inícioN += passoN;
-      if(inícioN < fimN) {
+
+      if(inícioN + passoN <= fimN) {
       resultado.innerHTML += `${inícioN} 👉 `;
       } else {
-        resultado.innerHTML += `${inícioN} 🏁 `;
+        resultado.innerHTML += `${inícioN} 🏁`;
+      }
+    }
+  } else {
+    resultado.innerHTML = `${inícioN} 👉 `;
+    while(inícioN - passoN >= fimN) {
+      inícioN -= passoN;
+      
+      if (inícioN - passoN >= fimN) {
+        resultado.innerHTML += `${inícioN} 👉 `;
+      } else {
+        resultado.innerHTML += `${inícioN} 🏁`;
       }
     }
   }
