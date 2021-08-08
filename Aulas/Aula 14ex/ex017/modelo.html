@@ -6,25 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modelo de Exercício </title>
   <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
   <div class="flex">
-    <h1>Título</h1>
+    <h1>Tabuada</h1>
     <section class="principal">
-      <div>
-        <form action="POST">
-          <label for="data-de-nascimento">Data de Nascimento:</label>
-          <input type="text" name="data-de-nascimento" id="data-de-nascimento"><br>
-          
-          <label for="sexo">Sexo:</label>
-          <input type="radio" name="sexo" id="masculino">
-          <label for="masculino">Masculino</label>
-          <input type="radio" name="sexo" id="feminino">
-          <label for="feminino">Feminino</label>
-        </form>
+      <div class="caixas">
+        <label for="multiplicador">Gerar tabuada do:</label>
+        <input type="number" name="multiplicador" id="multiplicador">
+        <input type="button" value="Contar" class="botão">
       </div>
-      <div> </div>
+      
+      <select name="tabuada" id="tabuada" size="10">
+      </select>
+        
     </section>
     <footer class="rodape">&copy; Amodeus R.</footer>
   </div>
