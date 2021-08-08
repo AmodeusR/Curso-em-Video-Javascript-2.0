@@ -9,7 +9,7 @@ function contar() {
   if (início.length == 0 || fim.length == 0 || passo.length == 0) {
     resultado.innerHTML = "Impossível contar! Cheque os campos.";
     return 0;
-  } else if (passo == 0) {
+  } else if (passo <= 0) {
     alert("Passo inválido! Considerando passo 1");
     passo = 1;
   } 
@@ -18,8 +18,9 @@ function contar() {
   let fimN = Number(fim);
   let passoN = Number(passo);
 
+  resultado.innerHTML = `${inícioN} 👉 `;
+
     if (inícioN < fimN) {
-      resultado.innerHTML = `${inícioN} 👉 `;
       while(inícioN + passoN <= fimN) {
         inícioN += passoN;
 
@@ -30,7 +31,6 @@ function contar() {
         }
       }
     } else {
-      resultado.innerHTML = `${inícioN} 👉 `;
       while(inícioN - passoN >= fimN) {
         inícioN -= passoN;
         
