@@ -6,6 +6,7 @@ let exibir = document.querySelector("#exibir");
 
 let vetor = [];
 
+  // Validação e adição de números no vetor pelo usuário
 function adicionarNúmero() {
   let caixaDeTexto = document.querySelector("#numerosUsuario");
   let n = caixaDeTexto.value
@@ -25,9 +26,21 @@ function adicionarNúmero() {
   vetor.push(n);
   exibir.innerHTML += `<option>Número ${n} foi adicionado</option>`;
   caixaDeTexto.value = "";
+  caixaDeTexto.focus();
 }
 
 function finalizar() {
+  
+  // Validação
+  if (exibir.innerText.length == "") {
+    alert("Insira números para finalizar!");
+    return 0;
+  } else if (exibir.length < 2) {
+    alert("Insira dois ou mais números para finalizar!");
+    return 0;
+  }
+  
+  // Processamento dos valores inseridos no vetor pelo usuário
   vetor.sort(function(a,b){return a - b;});
   let soma = 0;
   for(let i = 0; i < vetor.length; i++){
