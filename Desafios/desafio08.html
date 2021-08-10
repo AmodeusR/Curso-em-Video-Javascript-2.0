@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Desconto</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .btn {
+      padding: 1em 2em;
+    }
+
+    .resultado {
+      margin: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calcular Desconto</h1>
+  <button class="btn" type="button">Desconto de 10%</button>
+
+  <div class="resultado">Clique no botão acima para iniciar!</div>
+  
+
+  <!-- Script Abaixo -->
+  <script>
+    const real = {
+      style: "currency",
+      currency: "BRL"
+    }
+    document.querySelector(".btn").addEventListener("click", exibirResultado);
+    const resultado = document.querySelector(".resultado");
+
+    function exibirResultado() {
+      let produto = prompt("Qual produto você está comprando?");
+      let preço = Number(prompt(`Qual é o preço do produto ${produto}?`));
+      resultado.innerHTML =
+      `
+      <p>Você acaba de ganhar 10% de desconto no produto ${produto}!</p>
+      <p>O desconto em reais é de ${(preço * 0.1).toLocaleString("pt-BR", real)}.</p>
+      <p>Seu produto ${produto} sairá por ${calcularDesconto(preço)}</p>
+      
+      `;
+      console.log(typeof calcularDesconto(preço));
+    }
+
+    function calcularDesconto(d) {
+
+      return (d - (d / 10)).toLocaleString('pt-BR', real);
+    }
+  </script>
+</body>
+</html>
