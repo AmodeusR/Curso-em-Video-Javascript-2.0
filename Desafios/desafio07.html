@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor Monetário</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .btn {
+      padding: 1em 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conversor Monetário</h1>
+  <button class="btn" type="button">Iniciar</button>
+
+  <p class="resultado">Clique no botão acima para iniciar!</p>
+  
+  <script>
+    document.querySelector(".btn").addEventListener("click", exibirResultado);
+    const resultado = document.querySelector(".resultado");
+    let dólarHoje = Number(prompt("Antes de mais nada, quanto está a cotação do dólar hoje?"));
+
+    function exibirResultado() {
+      let realUsuário = Number(prompt("Quantos reais você tem?"));
+      
+      resultado.innerHTML =
+      `
+      Com ${realUsuário} é possível comprar ${converter(realUsuário)} dólares.      
+      `;
+    }
+
+    function converter(d) {
+
+      return (d / dólarHoje).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    }
+  </script>
+</body>
+</html>
