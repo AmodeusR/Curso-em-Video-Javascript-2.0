@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador</title>
+  <title>Analisador de Números</title>
   <link rel="stylesheet" href="estilo.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,27 +14,22 @@
 <body>
 
   <div class="flex">
-    <h1>Contador</h1>
+    <h1>Analisador de números</h1>
     <section class="principal">
       <div class="caixas">
-        <div class="conjunto">
-          <label for="inicio">Início:</label>
-          <input type="number" name="inicio" id="inicio">
-        </div>
-
-        <div class="conjunto">
-          <label for="fim">Fim:</label>
-          <input type="number" name="fim" id="fim">
-        </div>
-        
-        <div class="conjunto">
-          <label for="passo">Passo:</label>
-          <input type="number" name="passo" id="passo">
-        </div>
-        
+        <label for="numerosUsuario">Insira um número (entre 1 e 100):</label>
+        <input type="number" name="numerosUsuario" id="numerosUsuario">
         <input type="button" value="Contar" class="botão">
+        <input type="button" value="Reiniciar" class="limpar botão">
+        
+        <select name="exibir" id="exibir" size="10">
+        </select>
+
+        <button class="finalizar botão">Finalizar</button>
+        <div class="resultado"></div>
       </div>
-      <p class="resultado">Esperando valores...</p>
+      
+        
     </section>
     <footer class="rodape">&copy; Amodeus R.</footer>
   </div>
